@@ -1,6 +1,6 @@
 # ElixirTeste
 
-**TODO: Application that generates a random number and writes it on the arquivo.txt file every minut. It uses supervisor, scheduler and a server**
+**Application that generates a random number and writes it on the arquivo.txt file every minut. It uses supervisor, scheduler and a server**
 
 ## Installation
 
