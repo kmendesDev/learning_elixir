@@ -3,17 +3,16 @@ defmodule ElixirTeste.Aplicacao do
 
   def start(_type, _args) do
     children = [
-      # Adiciona o módulo Quantum como o agendador da aplicação
       ElixirTeste.ServidorAleatorio,
       ElixirTeste.Agendador
     ]
 
     opts = [
-      strategy: :one_for_one, # Reinicia um único processo se ele falhar
+      strategy: :one_for_one, # Restarts the process once if it stops
       name: ElixirTeste.Supervisor
     ]
 
-    # Inicializa o supervisor com a lista de filhos e as opções fornecidas
+    # starts the supervisor:
     Supervisor.start_link(children, opts)
   end
 end
